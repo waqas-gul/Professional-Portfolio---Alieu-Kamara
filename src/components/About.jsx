@@ -93,25 +93,7 @@ const About = () => {
                 Security Response and Detection Engineering Team.
               </p>
             </div>
-
-            {/* Experience highlight */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={
-                isVisible
-                  ? { opacity: 1, scale: 1 }
-                  : { opacity: 0, scale: 0.95 }
-              }
-              transition={{ delay: 0.6 }}
-              className="mt-10 p-6 bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-700 dark:to-blue-800 rounded-lg text-white"
-            >
-              <div className="flex items-center justify-center">
-                <div className="text-4xl font-bold mr-4">10+</div>
-                <div className="text-lg">
-                  Years of Professional Experience in IT Security
-                </div>
-              </div>
-            </motion.div>
+            
           </motion.div>
         </motion.div>
       </div>
