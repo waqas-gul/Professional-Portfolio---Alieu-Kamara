@@ -46,6 +46,6 @@ A high-performance cybersecurity portfolio website built with React.js and Tailw
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/portfolio-website.git
-   cd portfolio-website
+   git clone [https://github.com/yourusername/portfolio-website.git](https://github.com/waqas-gul/Professional-Portfolio---Alieu-Kamara.git)
+   cd Professional-Portfolio---Alieu-Kamara
    ```
