@@ -213,19 +213,19 @@ const Hero = () => {
 
       {/* Content */}
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-          {/* Left */}
+        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-8 md:gap-10">
+          {/* Left - Text Content (comes first on mobile) */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7 }}
-            className="md:w-1/2 text-center md:text-left"
+            className="md:w-1/2 text-center md:text-left mt-8 md:mt-0"
           >
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-white mb-4"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 dark:text-white mb-4"
             >
               Alieu Kamara
             </motion.h1>
@@ -234,9 +234,9 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-xl md:text-2xl lg:text-3xl text-blue-600 dark:text-blue-400 mb-6 h-14"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-600 dark:text-blue-400 mb-6 h-12 sm:h-14 flex items-center justify-center md:justify-start"
             >
-              {currentText}
+              <span className="min-h-[1.5em]">{currentText}</span>
               <span className="typing-cursor">|</span>
             </motion.h2>
 
@@ -244,13 +244,13 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="text-lg text-gray-600 dark:text-gray-300 mb-10"
+              className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-6 md:mb-10"
             >
               Glen Burnie, MD, USA
             </motion.p>
 
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start"
+              className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center md:justify-start"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.8 }}
@@ -259,10 +259,10 @@ const Hero = () => {
                 href="#contact"
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0px 5px 20px rgba(59, 130, 246, 0.6)", // Tailwind's blue-500 with opacity
+                  boxShadow: "0px 5px 20px rgba(59, 130, 246, 0.6)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-colors text-center"
+                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 sm:px-8 rounded-lg shadow-lg transition-colors text-center text-sm sm:text-base"
               >
                 Hire Me
               </motion.a>
@@ -272,24 +272,24 @@ const Hero = () => {
                 download
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0px 5px 20px rgba(59, 130, 246, 0.6)", // blue glow
+                  boxShadow: "0px 5px 20px rgba(59, 130, 246, 0.6)",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-3 px-8 rounded-lg shadow-lg transition-all duration-300 text-center"
+                className="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-3 px-6 sm:px-8 rounded-lg shadow-lg transition-all duration-300 text-center text-sm sm:text-base"
               >
                 Download Resume
               </motion.a>
             </motion.div>
           </motion.div>
 
-          {/* Right */}
+          {/* Right - Image (comes second on mobile) */}
           <motion.div
             className="md:w-1/2 flex justify-center"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
-            <div className="relative w-80 h-80 md:w-96 md:h-96">
+            <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full blur-lg opacity-20"></div>
               <motion.img
                 src={profileImage}
@@ -297,7 +297,7 @@ const Hero = () => {
                 className="relative z-10 w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-2xl"
                 whileHover={{
                   scale: 1.03,
-                  boxShadow: "0px 0px 25px rgba(59, 130, 246, 0.7)", // blue glow effect
+                  boxShadow: "0px 0px 25px rgba(59, 130, 246, 0.7)",
                 }}
                 transition={{ type: "spring", stiffness: 300 }}
               />
