@@ -12,11 +12,7 @@ const Hero = () => {
   const canvasRef = useRef(null);
   const animationFrameId = useRef(null);
 
-  const texts = [
-    "Chief Technology Officer",
-    "Cybersecurity Engineer",
-    "Technology Innovator",
-  ];
+  const texts = ["Cybersecurity Engineer", "Technology Innovator","Cybersecurity Advisor"];
 
   useEffect(() => {
     const handleTyping = () => {

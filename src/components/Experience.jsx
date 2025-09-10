@@ -73,18 +73,6 @@ const ExperienceItem = ({ exp, index, total }) => {
 const Experience = () => {
   const experiences = [
     {
-      role: "Chief Technology Officer",
-      company: "AmaraTech IT Solutions",
-      location: "Columbia, MD",
-      period: "Mar 2020 - Present",
-      achievements: [
-        "Responsible for ensuring optimum value from all company IT investments",
-        "Providing technical leadership using sound business acumen",
-        "Hosted Networking Summit on Cybersecurity benefits for small businesses",
-        "Presented on Digital Transformation at African Stake Holder Meetings"
-      ]
-    },
-    {
       role: "Manager - Security Process & Vulnerability",
       company: "National Institute of Health (Zero Trust)",
       location: "Rockville Campus",

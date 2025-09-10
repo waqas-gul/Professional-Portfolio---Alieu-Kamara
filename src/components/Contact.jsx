@@ -112,7 +112,7 @@ const Contact = () => {
               <ContactInfoItem
                 icon={<FaEnvelope className="w-5 h-5" />}
                 title="Email"
-                content="akamara@amaratechit.com"
+                content="amaratech@outlook.com"
                 href="mailto:akamara@amaratechit.com"
                 isLink={true}
               />

@@ -73,7 +73,7 @@ const Skills = () => {
       color: "from-teal-500 to-teal-700",
     },
     {
-      title: "Executive Leadership",
+      title: "Executive Leadership Advisory",
       icon: "👔",
       skills: [
         "Data Analytics",

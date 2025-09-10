@@ -60,9 +60,8 @@ const Footer = () => {
               </h3>
             </div>
             <p className="text-gray-400 mb-6 max-w-md text-lg leading-relaxed">
-              Chief Technology Officer & Cybersecurity Engineer with over 10
-              years of experience in IT security, cloud orchestration, and
-              executive leadership.
+              Cybersecurity Engineer with over 10 years of experience in IT
+              security, cloud orchestration, and executive leadership.
             </p>
             <div className="flex space-x-4">
               {[
@@ -74,7 +73,7 @@ const Footer = () => {
                 },
                 {
                   icon: <FaEnvelope className="w-5 h-5" />,
-                  href: "mailto:akamara@amaratechit.com",
+                  href: "mailto:amaratech@outlook.com",
                   label: "Email",
                   color: "hover:text-red-400",
                 },
@@ -161,7 +160,7 @@ const Footer = () => {
                 },
                 {
                   icon: <FaEnvelope className="w-4 h-4" />,
-                  text: "akamara@amaratechit.com",
+                  text: "amaratech@outlook.com",
                   copy: true,
                   copied: emailCopied,
                   setCopied: setEmailCopied,
