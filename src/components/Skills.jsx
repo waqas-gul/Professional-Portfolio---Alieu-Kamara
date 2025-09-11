@@ -22,7 +22,7 @@ const Skills = () => {
       title: "SIEM Tools",
       icon: "🔍",
       skills: ["Splunk", "Qradar", "Graylog"],
-      color: "from-blue-500 to-blue-700",
+      color: "from-[#E37378] to-[#CB2026]",
     },
     {
       title: "Ticketing Systems",
@@ -105,7 +105,7 @@ const Skills = () => {
             initial={{ opacity: 0 }}
             animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-blue-600 dark:text-blue-400 font-semibold tracking-wide uppercase"
+            className="text-[#D94A4F] dark:text-[#ED9C9F] font-semibold tracking-wide uppercase"
           >
             Technical Expertise
           </motion.span>
@@ -121,7 +121,7 @@ const Skills = () => {
             initial={{ width: 0 }}
             animate={isVisible ? { width: "100px" } : { width: 0 }}
             transition={{ delay: 0.5, duration: 0.5 }}
-            className="h-1 bg-blue-600 dark:bg-blue-400 mx-auto"
+            className="h-1 bg-[#D94A4F] dark:bg-[#ED9C9F] mx-auto"
           ></motion.div>
         </motion.div>
 
@@ -172,7 +172,7 @@ const Skills = () => {
                           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                             {skill}
                           </span>
-                          <span className="text-xs font-semibold text-blue-600 dark:text-blue-400">
+                          <span className="text-xs font-semibold text-[#D94A4F] dark:text-[#ED9C9F]">
                             {(85 + Math.random() * 15) | 0}%
                           </span>
                         </div>

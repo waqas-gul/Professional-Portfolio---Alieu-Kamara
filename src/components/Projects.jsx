@@ -32,10 +32,10 @@ const ProjectCard = ({ project, index }) => {
 
       {/* Decorative corner accent */}
       <div className="absolute top-0 right-0 w-16 h-16 overflow-hidden">
-        <div className="absolute transform rotate-45 bg-blue-500 text-white text-xs font-bold py-1 px-6 top-4 -right-4"></div>
+        <div className="absolute transform rotate-45 bg-[#E37378] text-white text-xs font-bold py-1 px-6 top-4 -right-4"></div>
       </div>
 
-      <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-4 relative z-10">
+      <h3 className="text-xl font-bold text-[#D94A4F] dark:text-[#ED9C9F] mb-4 relative z-10">
         {project.title}
       </h3>
 
@@ -43,8 +43,8 @@ const ProjectCard = ({ project, index }) => {
         {project.description}
       </p>
 
-      <div className="mt-4 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg border border-blue-100 dark:border-blue-800/30 group-hover:border-blue-300 dark:group-hover:border-blue-600 transition-colors duration-300 relative z-10">
-        <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-2 flex items-center">
+      <div className="mt-4 p-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg border border-blue-100 dark:border-blue-800/30 group-hover:border-blue-300 dark:group-hover:border-[#D94A4F] transition-colors duration-300 relative z-10">
+        <h4 className="font-semibold text-[#CB2026] dark:text-blue-300 mb-2 flex items-center">
           <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
             <path
               fillRule="evenodd"
@@ -54,7 +54,7 @@ const ProjectCard = ({ project, index }) => {
           </svg>
           Key Outcomes:
         </h4>
-        <p className="text-sm text-blue-600 dark:text-blue-200">
+        <p className="text-sm text-[#D94A4F] dark:text-blue-200">
           {project.outcomes}
         </p>
       </div>
@@ -112,7 +112,7 @@ const Projects = () => {
             initial={{ width: 0 }}
             animate={isInView ? { width: "100px" } : { width: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="h-1 bg-blue-500 mx-auto mt-4 rounded-full"
+            className="h-1 bg-[#E37378] mx-auto mt-4 rounded-full"
           ></motion.div>
         </motion.h2>
 

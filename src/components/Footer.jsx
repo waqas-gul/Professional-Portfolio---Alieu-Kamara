@@ -41,7 +41,7 @@ const Footer = () => {
     <footer className="bg-gradient-to-b from-gray-900 to-gray-950 text-white relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBkPSJNMCwwIEwyMDAsMCBMMjAwLDIwMCBMMCwyMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzFhMWExYSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9zdmc+')] opacity-10"></div>
-      <div className="absolute -top-20 -left-20 w-40 h-40 bg-blue-500 rounded-full blur-3xl opacity-10"></div>
+      <div className="absolute -top-20 -left-20 w-40 h-40 bg-[#E37378] rounded-full blur-3xl opacity-10"></div>
       <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-indigo-500 rounded-full blur-3xl opacity-10"></div>
 
       <div className="container mx-auto px-4 py-16 relative z-10">
@@ -54,7 +54,7 @@ const Footer = () => {
             className="lg:col-span-2"
           >
             <div className="flex items-center space-x-3 mb-6">
-              <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full animate-pulse"></div>
+              <div className="w-4 h-4 bg-gradient-to-r from-[#E37378] to-indigo-600 rounded-full animate-pulse"></div>
               <h3 className="text-2xl font-bold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
                 Alieu Kamara
               </h3>
@@ -69,7 +69,7 @@ const Footer = () => {
                   icon: <FaLinkedin className="w-5 h-5" />,
                   href: "https://www.linkedin.com/in/alieukamara/",
                   label: "LinkedIn",
-                  color: "hover:text-blue-400",
+                  color: "hover:text-[#ED9C9F]",
                 },
                 {
                   icon: <FaEnvelope className="w-5 h-5" />,
@@ -114,7 +114,7 @@ const Footer = () => {
             transition={{ delay: 0.1 }}
           >
             <h4 className="text-lg font-semibold mb-6 flex items-center">
-              <FaShieldAlt className="w-5 h-5 text-blue-500 mr-2" />
+              <FaShieldAlt className="w-5 h-5 text-[#E37378] mr-2" />
               Navigation
             </h4>
             <ul className="space-y-3">
@@ -123,9 +123,9 @@ const Footer = () => {
                   <motion.a
                     href={link.href}
                     whileHover={{ x: 5 }}
-                    className="text-gray-400 hover:text-blue-400 transition-colors duration-300 flex items-center group"
+                    className="text-gray-400 hover:text-[#ED9C9F] transition-colors duration-300 flex items-center group"
                   >
-                    <span className="w-2 h-2 bg-blue-500 rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+                    <span className="w-2 h-2 bg-[#E37378] rounded-full mr-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                     {link.name}
                   </motion.a>
                 </li>
@@ -141,7 +141,7 @@ const Footer = () => {
             transition={{ delay: 0.2 }}
           >
             <h4 className="text-lg font-semibold mb-6 flex items-center">
-              <FaMapMarkerAlt className="w-5 h-5 text-blue-500 mr-2" />
+              <FaMapMarkerAlt className="w-5 h-5 text-[#E37378] mr-2" />
               Contact Info
             </h4>
             <div className="space-y-4">
@@ -170,13 +170,13 @@ const Footer = () => {
                   key={index}
                   whileHover={{ x: 5 }}
                   className={`flex items-start text-gray-400 group cursor-pointer ${
-                    item.copy ? "hover:text-blue-400" : ""
+                    item.copy ? "hover:text-[#ED9C9F]" : ""
                   }`}
                   onClick={() =>
                     item.copy && copyToClipboard(item.text, item.setCopied)
                   }
                 >
-                  <span className="w-5 h-5 mr-3 mt-0.5 text-blue-500">
+                  <span className="w-5 h-5 mr-3 mt-0.5 text-[#E37378]">
                     {item.icon}
                   </span>
                   <div className="flex-1">
@@ -238,7 +238,7 @@ const Footer = () => {
               onClick={scrollToTop}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="w-10 h-10 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-lg flex items-center justify-center text-white hover:shadow-lg transition-all duration-300"
+              className="w-10 h-10 bg-gradient-to-r from-[#D94A4F] to-indigo-600 rounded-lg flex items-center justify-center text-white hover:shadow-lg transition-all duration-300"
               aria-label="Scroll to top"
             >
               <FaArrowUp className="w-4 h-4" />
@@ -255,7 +255,7 @@ const Footer = () => {
         transition={{ delay: 0.5 }}
         className="absolute bottom-6 right-6 hidden lg:block"
       >
-        <div className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full p-3 shadow-2xl border-2 border-white/20">
+        <div className="bg-gradient-to-r from-[#D94A4F] to-indigo-600 rounded-full p-3 shadow-2xl border-2 border-white/20">
           <FaShieldAlt className="w-6 h-6 text-white" />
         </div>
       </motion.div>

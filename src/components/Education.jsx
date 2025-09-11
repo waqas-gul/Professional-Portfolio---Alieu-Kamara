@@ -20,7 +20,7 @@ const EducationItem = ({ edu, index, total }) => {
       {index < total - 1 && (
         <div className="absolute left-6 top-14 bottom-0 w-1 bg-blue-200 dark:bg-blue-800/40 z-0">
           <div
-            className="h-0 w-full bg-blue-500 transition-all duration-1000 ease-out"
+            className="h-0 w-full bg-[#E37378] transition-all duration-1000 ease-out"
             style={{ height: isInView ? "100%" : "0%" }}
           ></div>
         </div>
@@ -28,7 +28,7 @@ const EducationItem = ({ edu, index, total }) => {
 
       {/* Timeline dot */}
       <div className="flex-shrink-0 relative z-10">
-        <div className="w-12 h-12 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
+        <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#E37378] to-indigo-600 flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform duration-300">
           <FaGraduationCap className="w-6 h-6" />
         </div>
       </div>
@@ -36,24 +36,24 @@ const EducationItem = ({ edu, index, total }) => {
       {/* Content */}
       <div className="ml-6 flex-1 bg-white dark:bg-gray-900 p-6 rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 group-hover:-translate-y-1">
         {/* Degree title with accent */}
-        <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+        <h3 className="text-xl font-bold text-[#D94A4F] dark:text-[#ED9C9F] mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
           {edu.degree}
         </h3>
 
         {/* Institution with icon */}
         <div className="flex items-center text-lg text-gray-700 dark:text-gray-300 mb-3">
-          <FaUniversity className="w-5 h-5 text-blue-500 mr-2" />
+          <FaUniversity className="w-5 h-5 text-[#E37378] mr-2" />
           <span>{edu.institution}</span>
         </div>
 
         {/* Year with icon */}
         <div className="flex items-center text-gray-500 dark:text-gray-400">
-          <FaCalendarAlt className="w-4 h-4 text-blue-400 mr-2" />
+          <FaCalendarAlt className="w-4 h-4 text-[#ED9C9F] mr-2" />
           <span>{edu.year}</span>
         </div>
 
         {/* Hover effect line */}
-        <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 group-hover:w-full transition-all duration-500 ease-out"></div>
+        <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#E37378] to-indigo-600 group-hover:w-full transition-all duration-500 ease-out"></div>
       </div>
     </motion.div>
   );
@@ -99,7 +99,7 @@ const Education = () => {
             initial={{ width: 0 }}
             animate={isInView ? { width: "100px" } : { width: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="h-1 bg-blue-500 mx-auto mt-4 rounded-full"
+            className="h-1 bg-[#E37378] mx-auto mt-4 rounded-full"
           ></motion.div>
         </motion.h2>
 

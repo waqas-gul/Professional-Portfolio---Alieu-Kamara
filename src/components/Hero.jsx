@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useEffect, useState, useRef } from "react";
 import resume from "../assets/resume.pdf";
 import profileImage from "../assets/profile.jpg"; // Make sure to add your image
+import { SiBuymeacoffee } from "react-icons/si";
 
 const Hero = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -12,7 +13,11 @@ const Hero = () => {
   const canvasRef = useRef(null);
   const animationFrameId = useRef(null);
 
-  const texts = ["Cybersecurity Engineer", "Technology Innovator","Cybersecurity Advisor"];
+  const texts = [
+    "Cybersecurity Engineer",
+    "Technology Innovator",
+    "Cybersecurity Advisor",
+  ];
 
   useEffect(() => {
     const handleTyping = () => {
@@ -124,12 +129,12 @@ const Hero = () => {
 
         ctx.beginPath();
         ctx.arc(node.x, node.y, node.radius, 0, Math.PI * 2);
-        ctx.fillStyle = "rgba(59, 130, 246, 0.7)";
+        ctx.fillStyle = "#D94A4F";
         ctx.fill();
       });
 
       // Connections + binary
-      ctx.strokeStyle = "rgba(59, 130, 246, 0.35)";
+      ctx.strokeStyle = "#CB2026";
       ctx.lineWidth = 1;
 
       for (let i = 0; i < nodes.length; i++) {
@@ -199,7 +204,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-gray-100 dark:from-gray-800 dark:to-gray-900 py-20 relative overflow-hidden"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-[#F7C6C7] to-gray-100 dark:from-gray-800 dark:to-gray-900 py-20 relative overflow-hidden"
     >
       {/* Canvas Background */}
       <canvas
@@ -230,7 +235,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-blue-600 dark:text-blue-400 mb-6 h-12 sm:h-14 flex items-center justify-center md:justify-start"
+              className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-[#D94A4F] dark:text-[#ED9C9F] mb-6 h-12 sm:h-14 flex items-center justify-center md:justify-start"
             >
               <span className="min-h-[1.5em]">{currentText}</span>
               <span className="typing-cursor">|</span>
@@ -240,7 +245,7 @@ const Hero = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 }}
-              className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-6 md:mb-10"
+              className="text-base sm:text-lg text--[#2C3131] dark:text-gray-300 mb-6 md:mb-10"
             >
               Glen Burnie, MD, USA
             </motion.p>
@@ -255,10 +260,10 @@ const Hero = () => {
                 href="#contact"
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0px 5px 20px rgba(59, 130, 246, 0.6)",
+                  boxShadow: "0px 5px 20px #D94A4F",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 sm:px-8 rounded-lg shadow-lg transition-colors text-center text-sm sm:text-base"
+                className="inline-block bg-[#D94A4F] hover:bg-[#CB2026] text-white font-bold py-3 px-6 sm:px-8 rounded-lg shadow-lg transition-colors text-center text-sm sm:text-base"
               >
                 Hire Me
               </motion.a>
@@ -268,10 +273,10 @@ const Hero = () => {
                 download
                 whileHover={{
                   scale: 1.05,
-                  boxShadow: "0px 5px 20px rgba(59, 130, 246, 0.6)",
+                  boxShadow: "0px 5px 20px #D94A4F",
                 }}
                 whileTap={{ scale: 0.95 }}
-                className="inline-block border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-bold py-3 px-6 sm:px-8 rounded-lg shadow-lg transition-all duration-300 text-center text-sm sm:text-base"
+                className="inline-block border-2 border-[#D94A4F] text-[#D94A4F] hover:bg-[#D94A4F] hover:text-white font-bold py-3 px-6 sm:px-8 rounded-lg shadow-lg transition-all duration-300 text-center text-sm sm:text-base"
               >
                 Download Resume
               </motion.a>
@@ -280,28 +285,80 @@ const Hero = () => {
 
           {/* Right - Image (comes second on mobile) */}
           <motion.div
-            className="md:w-1/2 flex justify-center"
+            className="md:w-1/2 flex justify-center flex-col items-center"
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 0.3 }}
           >
             <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400 to-blue-600 rounded-full blur-lg opacity-20"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-[#ED9C9F] to-[#D94A4F] rounded-full blur-lg opacity-20"></div>
               <motion.img
                 src={profileImage}
                 alt="Alieu Kamara"
                 className="relative z-10 w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-2xl"
                 whileHover={{
                   scale: 1.03,
-                  boxShadow: "0px 0px 25px rgba(59, 130, 246, 0.7)",
+                  boxShadow: "0px 0px 25px #D94A4F",
                 }}
                 transition={{ type: "spring", stiffness: 300 }}
               />
 
-              <div className="absolute -bottom-2 -right-2 bg-blue-600 text-white text-xs font-bold py-1 px-2 rounded-lg shadow-lg">
+              <div className="absolute -bottom-2 -right-2 bg-[#D94A4F] text-white text-xs font-bold py-1 px-2 rounded-lg shadow-lg">
                 🔒 SECURE
               </div>
             </div>
+
+            {/* SWAG Button */}
+            <motion.a
+              href="https://amaratechit.com/swag/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-6 inline-flex group items-center gap-2 bg-gray-800 hover:bg-[#D94A4F] border-2 border-[#E37378] text-white font-medium py-2 px-4 rounded-lg shadow-md transition-all duration-300 text-center text-sm"
+              initial={{
+                opacity: 0,
+                y: 20,
+              }}
+              animate={{
+                opacity: 1,
+                y: [0, -15, 0, -10, 0, -5, 0], // Bouncing effect
+                transition: {
+                  y: {
+                    duration: 3,
+                    repeat: Infinity,
+                    times: [0, 0.2, 0.4, 0.6, 0.8, 0.9, 1],
+                  },
+                  opacity: {
+                    duration: 0.5,
+                    delay: 1.2,
+                  },
+                },
+              }}
+              whileHover={{
+                scale: 1.1,
+                backgroundColor: "#CB2026",
+                boxShadow: "0px 5px 20px #D94A4F",
+                y: 0, // Stop bouncing when hovered
+                transition: {
+                  type: "spring",
+                  stiffness: 400,
+                  damping: 10,
+                },
+              }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <motion.span
+                animate={{
+                  rotate: [0, 10, -10, 0],
+                }}
+                transition={{
+                  duration: 3,
+                  repeat: Infinity,
+                }}
+              >
+                <SiBuymeacoffee className="text-[#E37378] group-hover:text-white transition-all duration-300" />
+              </motion.span>
+              Support by buying our SWAG
+            </motion.a>
           </motion.div>
         </div>
       </div>
@@ -309,7 +366,7 @@ const Hero = () => {
       <style jsx>{`
         .typing-cursor {
           animation: blink 1s infinite;
-          color: #3b82f6;
+          color: #CB2026;
         }
         @keyframes blink {
           0%,

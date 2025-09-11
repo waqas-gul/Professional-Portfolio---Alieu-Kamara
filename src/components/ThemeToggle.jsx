@@ -12,7 +12,7 @@ const ThemeToggle = ({ darkMode, setDarkMode }) => {
     >
       {darkMode ? (
         <svg
-          className="w-5 h-5 text-yellow-400"
+          className="w-5 h-5 text-[#CB2026]"
           fill="currentColor"
           viewBox="0 0 20 20"
         >
@@ -24,7 +24,7 @@ const ThemeToggle = ({ darkMode, setDarkMode }) => {
         </svg>
       ) : (
         <svg
-          className="w-5 h-5 text-gray-700"
+          className="w-5 h-5 text-[#CB2026]"
           fill="currentColor"
           viewBox="0 0 20 20"
         >

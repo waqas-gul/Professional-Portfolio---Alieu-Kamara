@@ -43,17 +43,17 @@ const CertificationCard = ({ cert, index, icon }) => {
 
       {/* Icon container with gradient background */}
       <div className="relative z-10 flex justify-center mb-4">
-        <div className="p-3 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full group-hover:scale-110 transition-transform duration-300">
+        <div className="p-3 bg-gradient-to-r from-[#E37378] to-indigo-600 rounded-full group-hover:scale-110 transition-transform duration-300">
           {icon}
         </div>
       </div>
 
-      <h3 className="text-lg font-semibold text-gray-800 dark:text-white text-center relative z-10 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-300">
+      <h3 className="text-lg font-semibold text-gray-800 dark:text-white text-center relative z-10 group-hover:text-[#D94A4F] dark:group-hover:text-[#ED9C9F] transition-colors duration-300">
         {cert}
       </h3>
 
       {/* Subtle bottom border accent on hover */}
-      <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 group-hover:w-full transition-all duration-500 ease-out"></div>
+      <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#E37378] to-indigo-600 group-hover:w-full transition-all duration-500 ease-out"></div>
     </motion.div>
   );
 };
@@ -131,7 +131,7 @@ const Certifications = () => {
             initial={{ width: 0 }}
             animate={isInView ? { width: "140px" } : { width: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="h-1 bg-blue-500 mx-auto mt-4 rounded-full"
+            className="h-1 bg-[#E37378] mx-auto mt-4 rounded-full"
           ></motion.div>
         </motion.h2>
 

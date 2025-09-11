@@ -53,7 +53,7 @@ const Header = ({ darkMode, setDarkMode }) => {
         animate={{ y: 0 }}
         className={`fixed w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white/95 dark:bg-gray-900/95 shadow-lg border-b border-gray-200 dark:border-gray-800 py-2"
+            ? "bg-white/95 dark:bg-gray-900/95 shadow-lg border-b border-[#CB2026] dark:border-gray-800 py-2"
             : "bg-transparent py-4"
         }`}
       >
@@ -62,8 +62,8 @@ const Header = ({ darkMode, setDarkMode }) => {
             whileHover={{ scale: 1.05 }}
             className="flex items-center space-x-2"
           >
-            <div className="w-3 h-3 bg-blue-600 rounded-full animate-pulse"></div>
-            <span className="text-xl font-bold text-blue-600 dark:text-blue-400">
+            <div className="w-3 h-3 bg-[#CB2026] rounded-full animate-pulse"></div>
+            <span className="text-xl font-bold text-[#CB2026] dark:text-[#CB2026">
               Alieu Kamara
             </span>
           </motion.div>
@@ -82,13 +82,13 @@ const Header = ({ darkMode, setDarkMode }) => {
                   whileTap={{ y: 0 }}
                   className={`transition-colors relative group ${
                     isActive
-                      ? "text-blue-600 dark:text-blue-400 font-medium"
-                      : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                      ? "text-[#CB2026] dark:text-[#CB2026] font-medium"
+                      : "text-gray-700 dark:text-gray-300 hover:text-[#CB2026] dark:hover:text-[#CB2026"
                   }`}
                 >
                   {item.name}
                   <span
-                    className={`absolute -bottom-1 left-0 h-0.5 bg-blue-600 transition-all ${
+                    className={`absolute -bottom-1 left-0 h-0.5 bg-[#CB2026] transition-all ${
                       isActive ? "w-full" : "w-0 group-hover:w-full"
                     }`}
                   ></span>
@@ -156,13 +156,13 @@ const Header = ({ darkMode, setDarkMode }) => {
                       whileTap={{ scale: 0.95 }}
                       className={`py-2 transition-colors border-b border-gray-100 dark:border-gray-800 ${
                         isActive
-                          ? "text-blue-600 dark:text-blue-400 font-medium"
-                          : "text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400"
+                          ? "text-[#CB2026] dark:text-[#D94A4F] font-medium"
+                          : "text-gray-700 dark:text-gray-300 hover:text-[#CB2026] dark:hover:text-[#D94A4F]"
                       }`}
                     >
                       {item.name}
                       {isActive && (
-                        <span className="ml-2 w-2 h-2 bg-blue-600 rounded-full inline-block"></span>
+                        <span className="ml-2 w-2 h-2 bg-[#CB2026] rounded-full inline-block"></span>
                       )}
                     </motion.a>
                   );

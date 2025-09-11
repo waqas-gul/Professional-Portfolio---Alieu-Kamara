@@ -22,7 +22,7 @@ const ContactInfoItem = ({ icon, title, content, href, isLink = false }) => {
       transition={{ duration: 0.5 }}
       className="flex items-start p-4 bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 group"
     >
-      <div className="p-3 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full text-white mr-4 group-hover:scale-110 transition-transform duration-300">
+      <div className="p-3 bg-gradient-to-r from-[#E37378] to-indigo-600 rounded-full text-white mr-4 group-hover:scale-110 transition-transform duration-300">
         {icon}
       </div>
       <div>
@@ -32,7 +32,7 @@ const ContactInfoItem = ({ icon, title, content, href, isLink = false }) => {
             href={href}
             target={href.startsWith("http") ? "_blank" : undefined}
             rel={href.startsWith("http") ? "noopener noreferrer" : undefined}
-            className="text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-300"
+            className="text-gray-600 dark:text-gray-300 hover:text-[#D94A4F] dark:hover:text-[#ED9C9F] transition-colors duration-300"
           >
             {content}
           </a>
@@ -85,7 +85,7 @@ const Contact = () => {
             initial={{ width: 0 }}
             animate={isInView ? { width: "120px" } : { width: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="h-1 bg-blue-500 mx-auto mt-4 rounded-full"
+            className="h-1 bg-[#E37378] mx-auto mt-4 rounded-full"
           ></motion.div>
         </motion.h2>
 
@@ -98,7 +98,7 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
             className="space-y-6"
           >
-            <h3 className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-6">
+            <h3 className="text-2xl font-bold text-[#D94A4F] dark:text-[#ED9C9F] mb-6">
               Let's Connect
             </h3>
 
@@ -167,7 +167,7 @@ const Contact = () => {
           >
             <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-800">
               <h3 className="text-2xl font-bold text-gray-800 dark:text-white mb-6 flex items-center">
-                <FaPaperPlane className="w-6 h-6 text-blue-500 mr-3" />
+                <FaPaperPlane className="w-6 h-6 text-[#E37378] mr-3" />
                 Send a Message
               </h3>
 
@@ -177,14 +177,14 @@ const Contact = () => {
                     htmlFor="name"
                     className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 items-center"
                   >
-                    <FaUser className="w-4 h-4 text-blue-500 mr-2" />
+                    <FaUser className="w-4 h-4 text-[#E37378] mr-2" />
                     Name
                   </label>
                   <input
                     type="text"
                     id="name"
                     {...register("name", { required: "Name is required" })}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white transition-colors duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-[#E37378] focus:border-[#E37378] dark:bg-gray-800 dark:text-white transition-colors duration-300"
                     placeholder="Your full name"
                   />
                   {errors.name && (
@@ -199,7 +199,7 @@ const Contact = () => {
                     htmlFor="email"
                     className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 items-center"
                   >
-                    <FaEnvelope className="w-4 h-4 text-blue-500 mr-2" />
+                    <FaEnvelope className="w-4 h-4 text-[#E37378] mr-2" />
                     Email
                   </label>
                   <input
@@ -212,7 +212,7 @@ const Contact = () => {
                         message: "Invalid email address",
                       },
                     })}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white transition-colors duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-[#E37378] focus:border-[#E37378] dark:bg-gray-800 dark:text-white transition-colors duration-300"
                     placeholder="your.email@example.com"
                   />
                   {errors.email && (
@@ -227,7 +227,7 @@ const Contact = () => {
                     htmlFor="subject"
                     className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 items-center"
                   >
-                    <FaComment className="w-4 h-4 text-blue-500 mr-2" />
+                    <FaComment className="w-4 h-4 text-[#E37378] mr-2" />
                     Subject
                   </label>
                   <input
@@ -236,7 +236,7 @@ const Contact = () => {
                     {...register("subject", {
                       required: "Subject is required",
                     })}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white transition-colors duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-[#E37378] focus:border-[#E37378] dark:bg-gray-800 dark:text-white transition-colors duration-300"
                     placeholder="What's this about?"
                   />
                   {errors.subject && (
@@ -251,7 +251,7 @@ const Contact = () => {
                     htmlFor="message"
                     className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2 items-center"
                   >
-                    <FaComment className="w-4 h-4 text-blue-500 mr-2" />
+                    <FaComment className="w-4 h-4 text-[#E37378] mr-2" />
                     Message
                   </label>
                   <textarea
@@ -260,7 +260,7 @@ const Contact = () => {
                     {...register("message", {
                       required: "Message is required",
                     })}
-                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-800 dark:text-white transition-colors duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg focus:ring-2 focus:ring-[#E37378] focus:border-[#E37378] dark:bg-gray-800 dark:text-white transition-colors duration-300"
                     placeholder="Tell me how I can help you..."
                   ></textarea>
                   {errors.message && (
@@ -275,7 +275,7 @@ const Contact = () => {
                   disabled={isSubmitting}
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
-                  className="w-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center disabled:opacity-50"
+                  className="w-full bg-gradient-to-r from-[#D94A4F] to-indigo-600 hover:from-[#CB2026] hover:to-indigo-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 flex items-center justify-center disabled:opacity-50"
                 >
                   {isSubmitting ? (
                     <>

@@ -36,23 +36,23 @@ const AssociationCard = ({ assoc, index, icon }) => {
 
       {/* Icon container with gradient background */}
       <div className="relative z-10 flex justify-center mb-4">
-        <div className="p-3 bg-gradient-to-r from-blue-500 to-indigo-600 rounded-full group-hover:scale-110 transition-transform duration-300">
+        <div className="p-3 bg-gradient-to-r from-[#E37378] to-indigo-600 rounded-full group-hover:scale-110 transition-transform duration-300">
           {icon}
         </div>
       </div>
 
-      <h3 className="text-xl font-bold text-blue-600 dark:text-blue-400 text-center mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
+      <h3 className="text-xl font-bold text-[#D94A4F] dark:text-[#ED9C9F] text-center mb-3 group-hover:text-indigo-600 dark:group-hover:text-indigo-400 transition-colors duration-300">
         {assoc.name}
       </h3>
 
       {/* Period and location */}
       <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mb-4 text-sm text-gray-500 dark:text-gray-400">
         <div className="flex items-center">
-          <FaCalendarAlt className="w-4 h-4 mr-2 text-blue-400" />
+          <FaCalendarAlt className="w-4 h-4 mr-2 text-[#ED9C9F]" />
           <span>{assoc.period}</span>
         </div>
         <div className="flex items-center">
-          <FaMapMarkerAlt className="w-4 h-4 mr-2 text-blue-400" />
+          <FaMapMarkerAlt className="w-4 h-4 mr-2 text-[#ED9C9F]" />
           <span>{assoc.location}</span>
         </div>
       </div>
@@ -62,7 +62,7 @@ const AssociationCard = ({ assoc, index, icon }) => {
       </p>
 
       {/* Hover effect line */}
-      <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-blue-500 to-indigo-600 group-hover:w-full transition-all duration-500 ease-out"></div>
+      <div className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#E37378] to-indigo-600 group-hover:w-full transition-all duration-500 ease-out"></div>
     </motion.div>
   );
 };
@@ -128,7 +128,7 @@ const Associations = () => {
             initial={{ width: 0 }}
             animate={isInView ? { width: "220px" } : { width: 0 }}
             transition={{ delay: 0.3, duration: 0.5 }}
-            className="h-1 bg-blue-500 mx-auto mt-4 rounded-full"
+            className="h-1 bg-[#E37378] mx-auto mt-4 rounded-full"
           ></motion.div>
         </motion.h2>
 
