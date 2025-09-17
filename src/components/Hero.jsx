@@ -307,58 +307,7 @@ const Hero = () => {
                 🔒 SECURE
               </div>
             </div>
-
-            {/* SWAG Button */}
-            <motion.a
-              href="https://amaratechit.com/swag/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-6 inline-flex group items-center gap-2 bg-gray-800 hover:bg-[#D94A4F] border-2 border-[#E37378] text-white font-medium py-2 px-4 rounded-lg shadow-md transition-all duration-300 text-center text-sm"
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-              animate={{
-                opacity: 1,
-                y: [0, -15, 0, -10, 0, -5, 0], // Bouncing effect
-                transition: {
-                  y: {
-                    duration: 3,
-                    repeat: Infinity,
-                    times: [0, 0.2, 0.4, 0.6, 0.8, 0.9, 1],
-                  },
-                  opacity: {
-                    duration: 0.5,
-                    delay: 1.2,
-                  },
-                },
-              }}
-              whileHover={{
-                scale: 1.1,
-                backgroundColor: "#CB2026",
-                boxShadow: "0px 5px 20px #D94A4F",
-                y: 0, // Stop bouncing when hovered
-                transition: {
-                  type: "spring",
-                  stiffness: 400,
-                  damping: 10,
-                },
-              }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <motion.span
-                animate={{
-                  rotate: [0, 10, -10, 0],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                }}
-              >
-                <SiBuymeacoffee className="text-[#E37378] group-hover:text-white transition-all duration-300" />
-              </motion.span>
-              Support by buying our SWAG
-            </motion.a>
+           
           </motion.div>
         </div>
       </div>
